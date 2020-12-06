@@ -1,6 +1,3 @@
-This is a template for the EDAV final project. It is based on the template created with *File, New Project..., New Directory, Book Project using bookdown* in RStudio. 
-
-
 ## BRIEF INTRODUCTION
 The project provides a data visualization/exploratory analysis on Portuguese vinho verde wine quality. 
 
