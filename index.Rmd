@@ -1,9 +1,19 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAMES HERE"
+title: "Vinho Verde Wine Quality Analysis"
+author: "Sally Bao & Eric Cheng & Qiran Li & Zhibin Li"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
 # Introduction
+
+Despite the covid-19 pandemic, we are all looking forward to celebrating Christmas safely with families and friends at home. As lots of people get the festivities started with a great glass of wine, we are excited to provide a brief introduction on the quality of Vinho Verde red and white wines from the north of Portugal. 
+
+In our report, our goal is to identify the relationship between red/white quality and physicochemical features. Note that, due to privacy and logistic issues, we have no access to wine brands, selling price, etc. To be more specific, we plan to answer the questions as follows:
+
+- What's the distribution (normal or skewed) of each feature?
+
+- Are there any feature pairs have a linear correlation?
+
+- What's the top 3 features that has the highest positive/negative correlation with wine quality?
 
