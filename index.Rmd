@@ -11,9 +11,9 @@ Despite the covid-19 pandemic, we are all looking forward to celebrating Christm
 
 In our report, our goal is to identify the relationship between red/white quality and eleven physicochemical attributes. Note that, due to privacy and logistic issues, we have no access to wine brands, selling price, etc. To be more specific, we plan to answer the questions as follows:
 
-- What's the distribution (normal or skewed) of each attribute?
+- What's the distribution of each attribute? Is it normally distrtibuted or skewed?
 
-- Are there any attribute pairs have a linear correlation?
+- Are there any attribute pairs have a linear correlation? 
 
-- What's the top 3 attributes that has the highest positive/negative correlation with wine quality?
+- What's the top 3 attributes that has the highest positive/negative correlation with red/white wine quality? 
 
