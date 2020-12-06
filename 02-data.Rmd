@@ -1,2 +1,9 @@
 # Data sources
 
+Eric is responsible for collecting the data. 
+
+Fortunately, two datasets, related to Portuguese red and white Vinho Verde wine samples, are publicly available on UCI
+Machine Learning Repository: https://archive.ics.uci.edu/ml/datasets/wine+quality.
+
+Some basic information about the dataset:
+
