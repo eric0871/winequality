@@ -5,5 +5,39 @@ Eric is responsible for collecting the data.
 Fortunately, two datasets, related to Portuguese red and white Vinho Verde wine samples, are publicly available on UCI
 Machine Learning Repository: https://archive.ics.uci.edu/ml/datasets/wine+quality.
 
-Some basic information about the dataset:
+## Dataset Summary
 
+### Number of Records
+- `red wine`: 1599 examples
+
+- `white wine`: 4898 examples
+
+### Attributes and Outcome
+In total, we have 11 attributes and 1 outcome (quality) for wine dataset.
+
+1. `fixed acidity`: non-volatile acid that do not evaporate readily (e.g. tartaric acid)
+
+2. `volatile acidity`: high acetic acid in wine that leads to an unpleasant vinegar taste
+
+3.  `citric acid`: increases swine acidity and adds a fresh flavor to wine
+
+4.  `residual sugar:`: the amount of sugar remaining after fermentation. Note that more than 45 g/l is a 'sweet wine'.
+
+5.  `chlorides`: the amount of salt in wine
+
+6.  `free sulfur dioxide`: prevents microbial growth and the oxidation of wine
+
+7.  `total sulfur dioxide`: the portion of free SO2 plus the portion bound to other chemicals in wine
+
+8.  `density`: sweeter wines have a higher density
+
+9.  `pH`: the level of acidity on a scale of 0–14. Most wines range from 3 to 4 on the pH scale.
+
+10. `sulphates`: a food preservative to maintain the flavor and freshness of wine
+
+11. `alcohol`: Note that the alcohol content of wine is between 5% and 23% ABV.
+
+12. `quality`: a grading scale of wine quality that ranges from 0 (very bad) to 10 (excellent).
+
+### Types of Variables 
+- 11 attributes are all numeric and the outcome is integer.
