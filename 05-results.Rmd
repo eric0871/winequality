@@ -1,1 +1,58 @@
 # Results
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+read the data
+```{r}
+library(tidyverse)
+library(gridExtra)
+
+df<- read.csv("../winequality-red.csv")
+df
+```
+
+producing boxplots for each of the variables
+```{r}
+draw_box <- function(df,variable)
+{
+  plot <- ggplot(data = df, aes(x = variable)) + 
+           geom_boxplot() +
+           xlab(substring(deparse(substitute(variable)),4))
+            
+  return(plot)
+}
+
+grid.arrange(draw_box(df, df$fixed.acidity),
+             draw_box(df, df$volatile.acidity),
+             draw_box(df, df$citric.acid),
+             draw_box(df, df$residual.sugar),
+             draw_box(df, df$chlorides),
+             draw_box(df, df$free.sulfur.dioxide),
+             draw_box(df, df$total.sulfur.dioxide),
+             draw_box(df, df$density),
+             draw_box(df, df$pH),
+             draw_box(df, df$sulphates),
+             draw_box(df, df$alcohol),
+             draw_box(df, df$quality),
+             ncol = 3)
+```
+
+```{r}
+library(GGally)
+ggpairs(df, upper = list(continuous = wrap("cor", size = 2.5)), axisLabels="none", progress = FALSE)
+```
+Find correlation for each pairs of variables.
+```{r}
+library(ggcorrplot)
+
+cormap <- round(cor(df),1)
+
+ggcorrplot(cormap, hc.order = TRUE, type = "lower", lab = TRUE)
+
+```
+We can see from both ggpairs plot and correlation heatmap that quality is strongly correlated with alcohol. We draw a scatterplot of alcohol and quality to find more information.
+```{r}
+ggplot(data = df,aes(x = alcohol, y = quality)) +
+  geom_point(color='blue',alpha = 0.5, position = "jitter")
+```
+
