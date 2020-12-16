@@ -40,4 +40,4 @@ In total, we have 11 attributes and 1 outcome (quality) for wine dataset.
 12. `quality`: a grading scale of wine quality that ranges from 0 (very bad) to 10 (excellent).
 
 ### Types of Variables 
-- 11 attributes are all numeric and the outcome is integer.
+11 attributes are all numeric and the outcome is integer.

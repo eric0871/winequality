@@ -1,9 +1,4 @@
----
-title: "final_project"
-author: "Yuan Cheng"
-date: "12/6/2020"
-output: html_document
----
+# Results
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -15,7 +10,7 @@ library(ggplot2)
 library(dplyr)
 library(reshape2)
 
-red_df <- read.csv("winequality-red.csv", sep = ';', head = T)
+red_df <- read.csv("resource/winequality-red.csv", sep = ';', head = T)
 
 head(red_df)
 
