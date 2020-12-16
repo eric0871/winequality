@@ -83,33 +83,28 @@ Next, let's take a look at some bavariate graphs of these variables.
 ```{r}
 red_df$quality <- as.factor(red_df$quality)
 
-ggplot(red_df, aes(x=quality, y=alcohol, fill=quality_category)) + 
-  geom_boxplot()
+a <- ggplot(red_df, aes(x=quality, y=alcohol, fill=quality_category)) + 
+  geom_boxplot() + theme(legend.position = "none")
+
+b <- ggplot(red_df, aes(x=quality, y=volatile.acidity, fill=quality_category)) + 
+  geom_boxplot() 
+
+c <- ggplot(red_df, aes(x=quality, y=sulphates, fill=quality_category)) + 
+  geom_boxplot() + theme(legend.position = "none")
+
+d <- ggplot(red_df, aes(x=quality, y=citric.acid, fill=quality_category)) + 
+  geom_boxplot() + theme(legend.position = "none")
+
+
+ggarrange(a,b,c,d)
 ```
 
 Alcohol has the strongest correlation with quality in our dataset. And from this graph, we can clearly see this relationship. Better wines have a high alcohol percentage. It is either because strong wines are more tasty or people who rates wines are wine lovers and they favor strong wines.
 
 
-```{r}
-red_df$quality <- as.factor(red_df$quality)
-
-ggplot(red_df, aes(x=quality, y=volatile.acidity, fill=quality_category)) + 
-  geom_boxplot()
-```
-
 From the graph above, we can tell that volatile acidity has a negative relationship with quality. Better wines tend to have lower median of volatile acidity.
 
-```{r}
-ggplot(red_df, aes(x=quality, y=sulphates, fill=quality_category)) + 
-  geom_boxplot()
-```
-
 Sulphates seems to have positive relationship with quality. Better wines have higher median of sulphates level.
-
-```{r}
-ggplot(red_df, aes(x=quality, y=citric.acid, fill=quality_category)) + 
-  geom_boxplot()
-```
 
 Citric acid seems to have positive relationship with quality. Better wines have higher median of citric acid level.
 
