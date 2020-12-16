@@ -1,5 +1,9 @@
 introduction
 data-sources
+dataset-summary
+number-of-records
+attributes-and-outcome
+types-of-variables
 data-transformation
 missing-values
 results

@@ -9,7 +9,9 @@ site: bookdown::bookdown_site
 
 Despite the covid-19 pandemic, we are all looking forward to celebrating Christmas safely with families and friends at home. As lots of people get the festivities started with a great glass of wine, we are excited to provide a brief introduction on the quality of Vinho Verde red and white wines from the north of Portugal. 
 
-In our report, our goal is to identify the relationship between red/white quality and eleven physicochemical attributes. Note that, due to privacy and logistic issues, we have no access to wine brands, selling price, etc. To be more specific, we plan to answer the questions as follows:
+In our report, our goal is to identify the relationship between red/white quality and eleven physicochemical attributes. Note that, due to privacy and logistic issues, we have no access to wine brands, selling price, etc. For more information, see the reference [Cortez et al., 2009] http://www3.dsi.uminho.pt/pcortez/wine/.
+
+In this project, we plan to answer the questions as follows:
 
 - What's the distribution of each attribute? Is it normally distrtibuted or skewed?
 

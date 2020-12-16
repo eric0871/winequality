@@ -24,7 +24,7 @@
 <meta name="author" content="Sally Bao &amp; Eric Cheng &amp; Qiran Li &amp; Zhibin Li" />
 
 
-<meta name="date" content="2020-12-06" />
+<meta name="date" content="2020-12-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -72,7 +72,13 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a></li>
+<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-sources.html"><a href="data-sources.html#dataset-summary"><i class="fa fa-check"></i><b>2.1</b> Dataset Summary</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="data-sources.html"><a href="data-sources.html#number-of-records"><i class="fa fa-check"></i><b>2.1.1</b> Number of Records</a></li>
+<li class="chapter" data-level="2.1.2" data-path="data-sources.html"><a href="data-sources.html#attributes-and-outcome"><i class="fa fa-check"></i><b>2.1.2</b> Attributes and Outcome</a></li>
+<li class="chapter" data-level="2.1.3" data-path="data-sources.html"><a href="data-sources.html#types-of-variables"><i class="fa fa-check"></i><b>2.1.3</b> Types of Variables</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a></li>
 <li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a></li>
 <li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a></li>
@@ -101,8 +107,39 @@
 <h1><span class="header-section-number">Chapter 2</span> Data sources</h1>
 <p>Eric is responsible for collecting the data.</p>
 <p>Fortunately, two datasets, related to Portuguese red and white Vinho Verde wine samples, are publicly available on UCI Machine Learning Repository: <a href="https://archive.ics.uci.edu/ml/datasets/wine+quality" class="uri">https://archive.ics.uci.edu/ml/datasets/wine+quality</a>.</p>
-<p>Some basic information about the dataset:</p>
+<div id="dataset-summary" class="section level2">
+<h2><span class="header-section-number">2.1</span> Dataset Summary</h2>
+<div id="number-of-records" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Number of Records</h3>
+<ul>
+<li><p><code>red wine</code>: 1599 examples</p></li>
+<li><p><code>white wine</code>: 4898 examples</p></li>
+</ul>
+</div>
+<div id="attributes-and-outcome" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Attributes and Outcome</h3>
+<p>In total, we have 11 attributes and 1 outcome (quality) for wine dataset.</p>
+<ol style="list-style-type: decimal">
+<li><p><code>fixed acidity</code>: non-volatile acid that do not evaporate readily (e.g. tartaric acid)</p></li>
+<li><p><code>volatile acidity</code>: high acetic acid in wine that leads to an unpleasant vinegar taste</p></li>
+<li><p><code>citric acid</code>: increases wine acidity and adds a fresh flavor to wine</p></li>
+<li><p><code>residual sugar:</code>: the amount of sugar remaining after fermentation. Note that more than 45 g/l is a 'sweet wine'.</p></li>
+<li><p><code>chlorides</code>: the amount of salt in wine</p></li>
+<li><p><code>free sulfur dioxide</code>: prevents microbial growth and the oxidation of wine</p></li>
+<li><p><code>total sulfur dioxide</code>: the portion of free SO2 plus the portion bound to other chemicals in wine</p></li>
+<li><p><code>density</code>: sweeter wines have a higher density</p></li>
+<li><p><code>pH</code>: the level of acidity on a scale of 0–14. Most wines range from 3 to 4 on the pH scale.</p></li>
+<li><p><code>sulphates</code>: a food preservative to maintain the flavor and freshness of wine</p></li>
+<li><p><code>alcohol</code>: Note that the alcohol content of wine is between 5% and 23% ABV.</p></li>
+<li><p><code>quality</code>: a grading scale of wine quality that ranges from 0 (very bad) to 10 (excellent).</p></li>
+</ol>
+</div>
+<div id="types-of-variables" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Types of Variables</h3>
+<p>11 attributes are all numeric and the outcome is integer.</p>
 
+</div>
+</div>
 </div>
             </section>
 
