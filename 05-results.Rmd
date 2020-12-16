@@ -8,9 +8,7 @@ library(dplyr)
 library(reshape2)
 
 red_df <- read.csv("resource/winequality-red.csv", sep = ';', head = T)
-
 head(red_df)
-
 ```
 
 Lets create a new column quality_category to indicate whether a wine is good (quality > 6), or average (quality = 5 or 6), or poor (quality < 5)
