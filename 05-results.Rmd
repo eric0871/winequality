@@ -1,12 +1,9 @@
 # Results
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ```{r}
 library(tidyr)
 library(ggplot2)
+library(ggpubr)
 library(dplyr)
 library(reshape2)
 
@@ -70,7 +67,7 @@ ggplot(data = melt_cm,aes(x=Var1, y=Var2, fill=value)) +
 pairs(red_df[1:12], col = red_df$quality, lower_panel = NULL)
 ```
 
-From the heatmap, the variables that have high correlation with quality are alcohol, volatile acidity, sulphates,  citric acid, and .
+From the heatmap, the variables that have high correlation with quality are alcohol, volatile acidity, sulphates,  citric acid, and 
 Next, let's take a look at some bavariate graphs of these variables.
 
 
@@ -90,9 +87,10 @@ c <- ggplot(red_df, aes(x=quality, y=sulphates, fill=quality_category)) +
 d <- ggplot(red_df, aes(x=quality, y=citric.acid, fill=quality_category)) + 
   geom_boxplot() + theme(legend.position = "none")
 
-
-ggarrange(a,b,c,d)
+ggarrange(a, b, c, d, ncol = 2, nrow = 2,
+                    common.legend = TRUE, legend = "right")
 ```
+
 
 Alcohol has the strongest correlation with quality in our dataset. And from this graph, we can clearly see this relationship. Better wines have a high alcohol percentage. It is either because strong wines are more tasty or people who rates wines are wine lovers and they favor strong wines.
 

@@ -19,7 +19,7 @@ In total, we have 11 attributes and 1 outcome (quality) for wine dataset.
 
 2. `volatile acidity`: high acetic acid in wine that leads to an unpleasant vinegar taste
 
-3.  `citric acid`: increases swine acidity and adds a fresh flavor to wine
+3.  `citric acid`: increases wine acidity and adds a fresh flavor to wine
 
 4.  `residual sugar:`: the amount of sugar remaining after fermentation. Note that more than 45 g/l is a 'sweet wine'.
 
