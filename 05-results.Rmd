@@ -6,6 +6,8 @@ library(ggplot2)
 library(ggpubr)
 library(dplyr)
 library(reshape2)
+library(GGally)
+library(viridis)
 
 red_df <- read.csv("resource/winequality-red.csv", sep = ';', head = T)
 
@@ -95,11 +97,43 @@ ggarrange(a, b, c, d, ncol = 2, nrow = 2,
 Alcohol has the strongest correlation with quality in our dataset. And from this graph, we can clearly see this relationship. Better wines have a high alcohol percentage. It is either because strong wines are more tasty or people who rates wines are wine lovers and they favor strong wines.
 
 
+
+
+
 From the graph above, we can tell that volatile acidity has a negative relationship with quality. Better wines tend to have lower median of volatile acidity.
 
 Sulphates seems to have positive relationship with quality. Better wines have higher median of sulphates level.
 
 Citric acid seems to have positive relationship with quality. Better wines have higher median of citric acid level.
+
+The following graph could further justify the above mentioned relationship between wine quality and alcohol density. 
+```{r}
+f1 = ggplot(red_df, aes(alcohol, quality, color = quality_category)) + 
+  geom_point() + 
+  facet_grid(cols = vars(quality_category)) +
+  scale_fill_manual(labels=letters[1:3], values=c("red","blue","green"))
+
+f2 = ggplot(red_df, aes(volatile.acidity, quality, color = quality_category)) + 
+  geom_point() + 
+  facet_grid(cols = vars(quality_category)) +
+  scale_fill_manual(labels=letters[1:3], values=c("red","blue","green"))
+
+
+f3 = ggplot(red_df, aes(sulphates, quality, color = quality_category)) + 
+  geom_point() + 
+  facet_grid(cols = vars(quality_category)) +
+  scale_fill_manual(labels=letters[1:3], values=c("red","blue","green"))
+
+f4 = ggplot(red_df, aes(citric.acid, quality, color = quality_category)) + 
+  geom_point() + 
+  facet_grid(cols = vars(quality_category)) +
+  scale_fill_manual(labels=letters[1:3], values=c("red","blue","green"))
+
+ggarrange(f1,f2,f3,f4, ncol = 2, nrow = 2,
+                    common.legend = TRUE)
+
+```
+
 
 Then, let's study how the combination of two variables affect quality by looking at some multivariate graphs.
 
@@ -135,3 +169,25 @@ ggplot(data = red_df, aes(x=volatile.acidity,y=chlorides,color = quality))+
 ```
 
 This graph supports our theory before that people have consistent standards of good wine and inconsistent standards of poor wines. Because all good wines are clustered in the lower left corner of the graph and poor wines have dispersed distribution.
+
+
+
+```{r}
+q <- cut(red_df$residual.sugar,breaks=4,labels = c("0-25","25-50","50-75","75-100"))
+ggplot(red_df, aes(fixed.acidity,alcohol,color = alcohol))+
+  geom_point()+
+  facet_wrap(q)+
+  scale_colour_gradient(low = "Blue",
+                        high = "Orange", na.value = "black")
+```
+This graph shows that for low fixed.acidity and high alcohol, the wine's residual.sugar values usually remain at very low level. 
+
+
+
+```{r}
+red_df$taste <- cut(red_df$quality,breaks=2,labels = c('poor','good'))
+ggparcoord(red_df, columns = c(1,2,3,4,10,11), alphaLines = .1
+           , scale = "globalminmax", splineFactor = 1, groupColumn = 14)
+```
+
+From the above parallel coordinate plot, it can further validate our correlation relationships between different variables. It can also indicates which factor leads to good taste for the red wine. 
