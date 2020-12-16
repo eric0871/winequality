@@ -1,11 +1,15 @@
 introduction
 data-sources
-dataset-summary
-number-of-records
 attributes-and-outcome
+number-of-records
 types-of-variables
 data-transformation
+load-in-data
+data-statistics
+categorize-quality-column
 missing-values
+heatmap
+vis_miss-plot-from-visdat
 results
 interactive-component
 conclusion

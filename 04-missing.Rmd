@@ -1,1 +1,28 @@
 # Missing values
+
+We create heatmap and visna() to analyze missing values and check whether a pattern exists for missing values and the ratio of missing values in each column. 
+
+```{r}
+library(tidyverse)
+library(gridExtra)
+
+df<- read.csv("resource/winequality-red.csv", sep = ';', head = T)
+```
+
+## Heatmap
+```{r,warning=FALSE,message=FALSE}
+library(heatmaply)
+heatmaply_na(
+  df[1:30, ],
+  xlab = '11 attributes and 1 outcome',
+  colors=viridis(100),
+  showticklabels = c(TRUE, FALSE),
+  key.title = 'NA ratio'
+)
+```
+
+## `vis_miss()` plot from **visdat**
+```{r,warning=FALSE,message=FALSE}
+library(naniar)
+vis_miss(df)
+```

@@ -5,48 +5,40 @@ Eric is responsible for collecting the data.
 Fortunately, two datasets, related to Portuguese red and white Vinho Verde wine samples, are publicly available on UCI
 Machine Learning Repository: https://archive.ics.uci.edu/ml/datasets/wine+quality.
 
-## Dataset Summary
 
-### Number of Records
-- `red wine`: 1599 examples
+## Attributes and Outcome
+In total, we have **11 attributes** and **1 outcome (quality)** for wine dataset.
 
-- `white wine`: 4898 examples
+1. **fixed acidity** $(g/l)$: non-volatile acid that do not evaporate readily (e.g. tartaric acid)
 
-### Attributes and Outcome
-In total, we have 11 attributes and 1 outcome (quality) for wine dataset.
+2. **volatile acidity** $(g/l)$: high acetic acid in wine that leads to an unpleasant vinegar taste
 
-1. `fixed acidity`: non-volatile acid that do not evaporate readily (e.g. tartaric acid)
-Fixed Acidity is expressed in $\frac{g}{dm^{3}}$ in this dataset.
+3. **citric acid** $(g/l)$: increases wine acidity and adds a fresh flavor to wine
 
-2. `volatile acidity`: high acetic acid in wine that leads to an unpleasant vinegar taste
-Volatile Acidity is expressed in $\frac{g}{dm^{3}}$ in this dataset.
+4. **residual sugar** $(g/l)$: the amount of sugar remaining after fermentation. Note that more than 45 g/l is a 'sweet wine'. 
 
-3.  `citric acid`: increases wine acidity and adds a fresh flavor to wine
-Citric Acid is expressed in $\frac{g}{dm^{3}}$ in this dataset.
+5. **chlorides** $(g/l)$: the amount of salt in wine
 
-4.  `residual sugar:`: the amount of sugar remaining after fermentation. Note that more than 45 g/l is a 'sweet wine'. Residual Sugar is expressed in $\frac{g}{dm^{3}}$ in this dataset.
+6. **free sulfur dioxide** $(mg/l)$: prevents microbial growth and the oxidation of wine
 
-5.  `chlorides`: the amount of salt in wine
-Chlorides is expressed in $\frac{g}{dm^{3}}$ in this dataset.
+7. **total sulfur dioxide** $(mg/l)$: the portion of free SO2 plus the portion bound to other chemicals in wine
 
-6.  `free sulfur dioxide`: prevents microbial growth and the oxidation of wine
-Free Sulfur Dioxide is expressed in $\frac{mg}{dm^{3}}$ in this dataset.
+8. **density** $(g/cm^{3})$: sweeter wines have a higher density
 
-7.  `total sulfur dioxide`: the portion of free SO2 plus the portion bound to other chemicals in wine
-Total sulfur dioxide is expressed in $\frac{mg}{dm^{3}}$ in this dataset.
+9. **pH**: the level of acidity on a scale of 0–14. Most wines range from 3 to 4 on the pH scale.
 
-8.  `density`: sweeter wines have a higher density
-Density is expressed in $\frac{g}{dm^{3}}$ in this dataset.
+10. **sulphates** $(g/l)$: a food preservative to maintain the flavor and freshness of wine
 
-9.  `pH`: the level of acidity on a scale of 0–14. Most wines range from 3 to 4 on the pH scale.
+11. **alcohol** $(vol.\%)$: Note that the alcohol content of wine is between 5% and 23% ABV.
 
-10. `sulphates`: a food preservative to maintain the flavor and freshness of wine
-Sulphates is expressed in $\frac{g}{dm^{3}}$ in this dataset.
+12. **quality**: a grading scale of wine quality that ranges from 0 (very bad) to 10 (excellent).
 
-11. `alcohol`: Note that the alcohol content of wine is between 5% and 23% ABV.
-Alcohol is measured in % vol or alcohol by volume (ABV) in this dataset.
 
-12. `quality`: a grading scale of wine quality that ranges from 0 (very bad) to 10 (excellent).
+## Number of Records
+- **red wine**: 1599 examples
 
-### Types of Variables 
-11 attributes are all numeric and the outcome is integer.
+- **white wine**: 4898 examples
+
+
+## Types of Variables 
+All the attributes are numeric and the outcome is integer.
