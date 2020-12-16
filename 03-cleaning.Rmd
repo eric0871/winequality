@@ -3,15 +3,13 @@
 As our datasets are well organized in csv files, we just call `read.csv` to load in wine data.
 ```{r}
 library(tidyr)
-library(ggplot2)
-library(ggpubr)
 library(dplyr)
 library(reshape2)
 
-red_df <- read.csv("resource/winequality-red.csv", sep = ';', head = T)
-head(red_df)
+df <- read.csv("resource/winequality-red.csv", sep = ';', head = T)
+head(df)
 ```
 
 ```{r}
-summary(red_df)
+summary(df)
 ```
