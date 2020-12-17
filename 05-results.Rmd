@@ -48,7 +48,7 @@ par(graph)
 
 From the boxplot, there are several things we observed:
 
-1. All the attributes have quite many outliers except citric.acid and alcohol. The observation might indicate better data in these two attributes and we would keey an eye on them while conducting correlation analysis.
+1. All the attributes have quite many outliers except citric.acid and alcohol. 
 
 2. The median of our dependent variable - quality is 6.
 
@@ -65,6 +65,14 @@ pairs(df[1:12], lower_panel = NULL)
 pairs(df[,c(1,2,3,8, 9, 11)])
 ```
 
+From the scattorplot matrix, we can observe that the following pairwise variables seem to have a linear correlation:
+
+- strong positive correlation: fixed acidity/citric acid, fixed acidity/density
+
+- strong negative correlation: fixed acidity/pH, density/alcohol
+
+
+
 ### Correlation Heatmap
 
 ```{r,warning=FALSE,message=FALSE}
@@ -73,13 +81,15 @@ cormap <- round(cor(df[1:12]),2)
 ggcorrplot(cormap, type = "lower", lab = TRUE, lab_size=3)
 ```
 
-From both the scattorplot matrix and correlation heatmap, we observe that the following pairs of variables seem to have a linear correlation:
+From the correlation heatmap, we again confirm the conclusion above 
 
-- strong positive correlation: fixed acidity/citric acid, fixed acidity/density
+- Three attributes fixed acidity, citric acid and density are closely positively correlated.
 
-- strong negative correlation: fixed acidity/pH, density/alcohol
+- Fixed acidity/pH, density/alcohol have high negative correlation.
 
-The observation is consistent with one of our conjectures: the sweeter the red wine is, the higher is the density.
+The observation is consistent with one of our conjectures: **Sweeter red wine implies higher density and lower pH. 
+
+P.S. For further analysis or feature selection, we could cluster all these attributes into one group.
 
 
 ## Correlation between Quality and Attributes
@@ -207,11 +217,14 @@ red_df$quality_category <- cut(red_df$quality,breaks=c(2,4,6,9),labels = c('poor
 ```
 
 ```{r,warning=FALSE,message=FALSE}
-red_df$taste <- cut(red_df$quality,breaks=2,labels = c('poor','good'))
-ggparcoord(red_df, columns = c(1,2,3,4,10,11), alphaLines = .1
-           , scale = "globalminmax", splineFactor = 1, groupColumn = 14)+
+red_df$red_wine_quality <- cut(red_df$quality,breaks=2,labels = c('poor','good'))
+ggparcoord(red_df, columns = c(1,2,3,4,10,11), alphaLines = .3, 
+           scale = "globalminmax", splineFactor = 8, groupColumn = 14)+
   ggtitle('Attributes vs Quality')
 ```
+
+In this parallel coordinate plot, we group by quality into two category: poor (0-5) and good (5-10).
+ 
 
 From the above parallel coordinate plot, it can further validate our correlation relationships between different variables. It can also indicates which factor leads to good taste for the red wine. 
 
