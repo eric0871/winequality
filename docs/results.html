@@ -98,14 +98,21 @@
 <li class="chapter" data-level="5.1.1" data-path="results.html"><a href="results.html#histogram-for-attributes"><i class="fa fa-check"></i><b>5.1.1</b> Histogram for Attributes</a></li>
 <li class="chapter" data-level="5.1.2" data-path="results.html"><a href="results.html#boxplot-for-attributes"><i class="fa fa-check"></i><b>5.1.2</b> Boxplot for Attributes</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#pairwise-correlation"><i class="fa fa-check"></i><b>5.2</b> Pairwise Correlation</a><ul>
+<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#pairwise-attribute-correlation"><i class="fa fa-check"></i><b>5.2</b> Pairwise Attribute Correlation</a><ul>
 <li class="chapter" data-level="5.2.1" data-path="results.html"><a href="results.html#scatterplot-matrix"><i class="fa fa-check"></i><b>5.2.1</b> Scatterplot Matrix</a></li>
 <li class="chapter" data-level="5.2.2" data-path="results.html"><a href="results.html#correlation-heatmap"><i class="fa fa-check"></i><b>5.2.2</b> Correlation Heatmap</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="results.html"><a href="results.html#section"><i class="fa fa-check"></i><b>5.3</b> 5</a></li>
-<li class="chapter" data-level="5.4" data-path="results.html"><a href="results.html#section-1"><i class="fa fa-check"></i><b>5.4</b> 6</a></li>
-<li class="chapter" data-level="5.5" data-path="results.html"><a href="results.html#section-2"><i class="fa fa-check"></i><b>5.5</b> 7</a></li>
-<li class="chapter" data-level="5.6" data-path="results.html"><a href="results.html#section-3"><i class="fa fa-check"></i><b>5.6</b> 8</a></li>
+<li class="chapter" data-level="5.3" data-path="results.html"><a href="results.html#correlation-between-quality-and-attributes"><i class="fa fa-check"></i><b>5.3</b> Correlation between Quality and Attributes</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="results.html"><a href="results.html#sweetness-and-sourness-v.s.-quality"><i class="fa fa-check"></i><b>5.3.1</b> Sweetness and Sourness v.s. Quality</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="results.html"><a href="results.html#alcohol-v.s.-quality"><i class="fa fa-check"></i><b>5.4</b> Alcohol v.s. Quality</a></li>
+<li class="chapter" data-level="5.5" data-path="results.html"><a href="results.html#section"><i class="fa fa-check"></i><b>5.5</b> ?</a></li>
+<li class="chapter" data-level="5.6" data-path="results.html"><a href="results.html#pair-attributes-v.s.-quality"><i class="fa fa-check"></i><b>5.6</b> Pair Attributes v.s. Quality</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="results.html"><a href="results.html#alcohol-volatile-acidity"><i class="fa fa-check"></i><b>5.6.1</b> Alcohol + Volatile Acidity</a></li>
+<li class="chapter" data-level="5.6.2" data-path="results.html"><a href="results.html#alcohol-chlorides"><i class="fa fa-check"></i><b>5.6.2</b> Alcohol + Chlorides</a></li>
+<li class="chapter" data-level="5.6.3" data-path="results.html"><a href="results.html#volatile-acidity-chlorides"><i class="fa fa-check"></i><b>5.6.3</b> Volatile Acidity + Chlorides</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="results.html"><a href="results.html#parallel-coordinate-plot"><i class="fa fa-check"></i><b>5.7</b> Parallel Coordinate Plot</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a></li>
 <li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a></li>
@@ -134,7 +141,7 @@
 <h2><span class="header-section-number">5.1</span> Distribution and Outliers</h2>
 <div id="histogram-for-attributes" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> Histogram for Attributes</h3>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-199-1.png" width="672" /></p>
 <p>From the histogram, there are several things we observed:</p>
 <ol style="list-style-type: decimal">
 <li><p>Volatile acidity, density, and pH seem to be normally distributed.</p></li>
@@ -146,7 +153,7 @@
 </div>
 <div id="boxplot-for-attributes" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> Boxplot for Attributes</h3>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-200-1.png" width="672" /></p>
 <p>From the boxplot, there are several things we observed:</p>
 <ol style="list-style-type: decimal">
 <li><p>All the attributes have quite many outliers except citric.acid and alcohol. The observation might indicate better data in these two attributes and we would keey an eye on them while conducting correlation analysis.</p></li>
@@ -154,46 +161,74 @@
 </ol>
 </div>
 </div>
-<div id="pairwise-correlation" class="section level2">
-<h2><span class="header-section-number">5.2</span> Pairwise Correlation</h2>
+<div id="pairwise-attribute-correlation" class="section level2">
+<h2><span class="header-section-number">5.2</span> Pairwise Attribute Correlation</h2>
 <div id="scatterplot-matrix" class="section level3">
 <h3><span class="header-section-number">5.2.1</span> Scatterplot Matrix</h3>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-28-1.png" width="672" /> <img src="finalproj_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-201-1.png" width="672" /> <img src="finalproj_files/figure-html/unnamed-chunk-202-1.png" width="672" /></p>
 </div>
 <div id="correlation-heatmap" class="section level3">
 <h3><span class="header-section-number">5.2.2</span> Correlation Heatmap</h3>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
-<p>When beginners first drink red wine, its much easier to taste the level of Sweetness and acidity of the red wine. We draw the scatterplot for residual sugar and volatile acidity with quality. We can see that only red wines with quality 4,5,6 have high and middle residual sugar and low and good quality red wines only have low residual sugar. So, if you feel the red wine is very sweet or even a little sweet, the quality red wine you drink is probably average. We also can see that only red wine with quality 3,4,5 has high volatile acidity. So, if you feel the red wine is very sour, the quality red wine you drink is probably low or average.</p>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
-<p>From the heatmap, the variables that have high correlation with quality are alcohol, volatile acidity, sulphates, citric acid, and Next, let's take a look at some bavariate graphs of these variables.</p>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-203-1.png" width="672" /></p>
+<p>From both the scattorplot matrix and correlation heatmap, we observe that the following pairs of variables seem to have a linear correlation:</p>
+<ul>
+<li><p>strong positive correlation: fixed acidity/citric acid, fixed acidity/density</p></li>
+<li><p>strong negative correlation: fixed acidity/pH, density/alcohol</p></li>
+</ul>
+<p>The observation is consistent with one of our conjectures: the sweeter the red wine is, the higher is the density.</p>
 </div>
+</div>
+<div id="correlation-between-quality-and-attributes" class="section level2">
+<h2><span class="header-section-number">5.3</span> Correlation between Quality and Attributes</h2>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-204-1.png" width="672" /> Recall the correlation heatmap, we can also tell attributes such as alcohol, citric acid and volatile acidity seem to have a linear correlation with quality.</p>
+<div id="sweetness-and-sourness-v.s.-quality" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Sweetness and Sourness v.s. Quality</h3>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-205-1.png" width="672" /></p>
+<p>When rookies first drink red wine, it's much easier to taste the level of sweetness and acidity. This common sense is consistent with our scatterplot for residual sugar and volatile acidity versus quality.</p>
+<ul>
+<li>Residual Sugar vs Quality</li>
+</ul>
+<p>We can see that only red wines with quality on or below average have high and middle residual sugar, while red wines with good quality only have low residual sugar. So, if the red wine you taste is very sweet , the quality of the red wine you drink is probably <strong>on or below average</strong>.</p>
+<ul>
+<li>Volatile acidity vs Quality</li>
+</ul>
+<p>Observe that only red wines with quality on or below average has high volatile acidity. So, if you taste the red wine is very sour, the quality red wine you drink is probably on or below average.</p>
+<p>However, we have to keep in mind that the scattorplot above doesn't generate any linear correlation between quality and sweetness/sourness.</p>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-206-1.png" width="672" /></p>
+<p>Now, from the boxplot above, we observe that there seems to be no linear correlation between quality and residual sugar. On the contrary, quality and volatile acidity seems to be negatively correlated. That is, the lower volatile acidity implies the better quality.</p>
+</div>
+</div>
+<div id="alcohol-v.s.-quality" class="section level2">
+<h2><span class="header-section-number">5.4</span> Alcohol v.s. Quality</h2>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-207-1.png" width="672" /></p>
+<p>Alcohol has the strongest positive correlation with quality in our dataset. And from this graph, we can clearly see this relationship. Better wines have a high alcohol percentage. It is either because strong wines are more tasty or people who rates wines are wine lovers and they favor strong wines.</p>
 </div>
 <div id="section" class="section level2">
-<h2><span class="header-section-number">5.3</span> 5</h2>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
-<p>Alcohol has the strongest correlation with quality in our dataset. And from this graph, we can clearly see this relationship. Better wines have a high alcohol percentage. It is either because strong wines are more tasty or people who rates wines are wine lovers and they favor strong wines.</p>
-<p>From the graph above, we can tell that volatile acidity has a negative relationship with quality. Better wines tend to have lower median of volatile acidity.</p>
-<p>Sulphates seems to have positive relationship with quality. Better wines have higher median of sulphates level.</p>
-<p>Citric acid seems to have positive relationship with quality. Better wines have higher median of citric acid level.</p>
+<h2><span class="header-section-number">5.5</span> ?</h2>
+<p>The following graph could further justify the above mentioned relationship between wine quality and alcohol density. <img src="finalproj_files/figure-html/unnamed-chunk-209-1.png" width="672" /></p>
 </div>
-<div id="section-1" class="section level2">
-<h2><span class="header-section-number">5.4</span> 6</h2>
-<p>The following graph could further justify the above mentioned relationship between wine quality and alcohol density. <img src="finalproj_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
-</div>
-<div id="section-2" class="section level2">
-<h2><span class="header-section-number">5.5</span> 7</h2>
-<p>Then, let's study how the combination of two variables affect quality by looking at some multivariate graphs.</p>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<div id="pair-attributes-v.s.-quality" class="section level2">
+<h2><span class="header-section-number">5.6</span> Pair Attributes v.s. Quality</h2>
+<p>Then, let's study how the combination of two variables affects quality by looking at some multivariate graphs.</p>
+<div id="alcohol-volatile-acidity" class="section level3">
+<h3><span class="header-section-number">5.6.1</span> Alcohol + Volatile Acidity</h3>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-210-1.png" width="672" /></p>
 <p>From the graph above, wee can see that good wines have higher alcohol and low volatile acidity levels than the other two groups with some outliers. The wine with the highest alcohol level scored only a 5 in quality. Also, the poor wines seem to have a dispersed distribution suggesting that people are consistent in the standards of good wines but inconsistent in the standards of poor wines.</p>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
-<p>This graph is interesting because it shows that most wines that have high chlorides level are categorized as average wines. This pattern suggests that chlorides may have a non-linear relationship with quality.</p>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
-<p>This graph supports our theory before that people have consistent standards of good wine and inconsistent standards of poor wines. Because all good wines are clustered in the lower left corner of the graph and poor wines have dispersed distribution.</p>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-37-1.png" width="672" /> This graph shows that for low fixed.acidity and high alcohol, the wine's residual.sugar values usually remain at very low level.</p>
 </div>
-<div id="section-3" class="section level2">
-<h2><span class="header-section-number">5.6</span> 8</h2>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-38-1.png" width="672" /> From the above parallel coordinate plot, it can further validate our correlation relationships between different variables. It can also indicates which factor leads to good taste for the red wine.</p>
+<div id="alcohol-chlorides" class="section level3">
+<h3><span class="header-section-number">5.6.2</span> Alcohol + Chlorides</h3>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-211-1.png" width="672" /></p>
+<p>This graph is interesting because it shows that most wines that have high chlorides level are categorized as average wines. This pattern suggests that chlorides may have a non-linear relationship with quality.</p>
+</div>
+<div id="volatile-acidity-chlorides" class="section level3">
+<h3><span class="header-section-number">5.6.3</span> Volatile Acidity + Chlorides</h3>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-212-1.png" width="672" /></p>
+<p>This graph supports our theory before that people have consistent standards of good wine and inconsistent standards of poor wines. Because all good wines are clustered in the lower left corner of the graph and poor wines have dispersed distribution.</p>
+</div>
+</div>
+<div id="parallel-coordinate-plot" class="section level2">
+<h2><span class="header-section-number">5.7</span> Parallel Coordinate Plot</h2>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-214-1.png" width="672" /> From the above parallel coordinate plot, it can further validate our correlation relationships between different variables. It can also indicates which factor leads to good taste for the red wine.</p>
 
 </div>
 </div>

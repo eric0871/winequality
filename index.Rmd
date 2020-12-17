@@ -16,9 +16,10 @@ In our report, we conduct an exploratory data analysis on the quality of Portugu
 
 In this project, we plan to answer the questions as follows:
 
+- Are the sweetness and sourness really affect the quality of wine most? If not, which is the top attribute we need to pay attention to? 
+
 - What's the distribution of each attribute? Is there any outlier in each attribute?
 
 - Are there any attribute pairs have a linear correlation? 
 
-- What's the top 3 attributes that has the highest positive/negative correlation with the red wine quality? 
 
