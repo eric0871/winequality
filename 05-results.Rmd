@@ -83,11 +83,7 @@ The observation is consistent with one of our conjectures: the sweeter the red w
 
 
 ## Correlation between Quality and Attributes
-```{r,warning=FALSE,message=FALSE}
-library(ggcorrplot)
-cormap <- round(cor(df[1:12]),2)
-ggcorrplot(cormap, type = "lower", lab = TRUE, lab_size=3)
-```
+
 Recall the correlation heatmap, we can also tell attributes such as alcohol, citric acid and volatile acidity seem to have a linear correlation with quality.
 
 
@@ -139,7 +135,7 @@ Now, from the boxplot above, we observe that there seems to be no linear correla
 
 
 
-## Alcohol v.s. Quality
+### Alcohol v.s. Quality
 
 ```{r,warning=FALSE,message=FALSE}
  a<-  ggplot(df, aes(x=quality, y=alcohol, fill=quality)) + 
@@ -158,45 +154,6 @@ ggarrange(a, b, ncol = 2, nrow = 1,
 
 Alcohol has the strongest positive correlation with quality in our dataset. And from this graph, we can clearly see this relationship. Better wines have a high alcohol percentage. It is either because strong wines are more tasty or people who rates wines are wine lovers and they favor strong wines.
 
-
-
-## ?
-```{r}
-library(tidyr)
-library(dplyr)
-library(reshape2)
-
-red_df <- read.csv("resource/winequality-red.csv", sep = ';', head = T)
-red_df$quality_category <- cut(red_df$quality,breaks=c(2,4,6,9),labels = c('poor','average','good'))
-```
-
-The following graph could further justify the above mentioned relationship between wine quality and alcohol density. 
-```{r,warning=FALSE,message=FALSE}
-f1 = ggplot(red_df, aes(alcohol, quality, color = quality_category)) + 
-  geom_point() + 
-  facet_grid(cols = vars(quality_category)) +
-  scale_fill_manual(labels=letters[1:3], values=c("red","blue","green"))
-
-f2 = ggplot(red_df, aes(volatile.acidity, quality, color = quality_category)) + 
-  geom_point() + 
-  facet_grid(cols = vars(quality_category)) +
-  scale_fill_manual(labels=letters[1:3], values=c("red","blue","green"))
-
-
-f3 = ggplot(red_df, aes(sulphates, quality, color = quality_category)) + 
-  geom_point() + 
-  facet_grid(cols = vars(quality_category)) +
-  scale_fill_manual(labels=letters[1:3], values=c("red","blue","green"))
-
-f4 = ggplot(red_df, aes(citric.acid, quality, color = quality_category)) + 
-  geom_point() + 
-  facet_grid(cols = vars(quality_category)) +
-  scale_fill_manual(labels=letters[1:3], values=c("red","blue","green"))
-
-ggarrange(f1,f2,f3,f4, ncol = 2, nrow = 2,
-                    common.legend = TRUE)
-
-```
 
 
 ## Pair Attributes v.s. Quality
@@ -245,7 +202,6 @@ This graph supports our theory before that people have consistent standards of g
 library(tidyr)
 library(dplyr)
 library(reshape2)
-
 red_df <- read.csv("resource/winequality-red.csv", sep = ';', head = T)
 red_df$quality_category <- cut(red_df$quality,breaks=c(2,4,6,9),labels = c('poor','average','good'))
 ```
@@ -256,6 +212,7 @@ ggparcoord(red_df, columns = c(1,2,3,4,10,11), alphaLines = .1
            , scale = "globalminmax", splineFactor = 1, groupColumn = 14)+
   ggtitle('Attributes vs Quality')
 ```
+
 From the above parallel coordinate plot, it can further validate our correlation relationships between different variables. It can also indicates which factor leads to good taste for the red wine. 
 
 

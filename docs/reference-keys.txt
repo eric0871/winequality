@@ -20,7 +20,6 @@ correlation-heatmap
 correlation-between-quality-and-attributes
 sweetness-and-sourness-v.s.-quality
 alcohol-v.s.-quality
-section
 pair-attributes-v.s.-quality
 alcohol-volatile-acidity
 alcohol-chlorides
