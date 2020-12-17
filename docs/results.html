@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Results | Vinho Verde Wine Quality Analysis</title>
-  <meta name="description" content="Chapter 5 Results | Vinho Verde Wine Quality Analysis" />
+  <title>Chapter 5 Results | Vinho Verde Red Wine Quality Analysis</title>
+  <meta name="description" content="Chapter 5 Results | Vinho Verde Red Wine Quality Analysis" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Results | Vinho Verde Wine Quality Analysis" />
+  <meta property="og:title" content="Chapter 5 Results | Vinho Verde Red Wine Quality Analysis" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Results | Vinho Verde Wine Quality Analysis" />
+  <meta name="twitter:title" content="Chapter 5 Results | Vinho Verde Red Wine Quality Analysis" />
   
   
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Sally Bao &amp; Eric Cheng &amp; Qiran Li &amp; Zhibin Li" />
 
 
-<meta name="date" content="2020-12-16" />
+<meta name="date" content="2020-12-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -61,43 +61,6 @@
 <script src="libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -122,15 +85,28 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.3" data-path="data-sources.html"><a href="data-sources.html#types-of-variables"><i class="fa fa-check"></i><b>2.3</b> Types of Variables</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a><ul>
-<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#load-in-data"><i class="fa fa-check"></i><b>3.1</b> Load in Data</a></li>
+<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#load-data"><i class="fa fa-check"></i><b>3.1</b> Load Data</a></li>
 <li class="chapter" data-level="3.2" data-path="data-transformation.html"><a href="data-transformation.html#data-statistics"><i class="fa fa-check"></i><b>3.2</b> Data Statistics</a></li>
 <li class="chapter" data-level="3.3" data-path="data-transformation.html"><a href="data-transformation.html#categorize-quality-column"><i class="fa fa-check"></i><b>3.3</b> Categorize <code>quality</code> column</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a><ul>
 <li class="chapter" data-level="4.1" data-path="missing-values.html"><a href="missing-values.html#heatmap"><i class="fa fa-check"></i><b>4.1</b> Heatmap</a></li>
-<li class="chapter" data-level="4.2" data-path="missing-values.html"><a href="missing-values.html#vis_miss-plot-from-visdat"><i class="fa fa-check"></i><b>4.2</b> <code>vis_miss()</code> plot from <strong>visdat</strong></a></li>
+<li class="chapter" data-level="4.2" data-path="missing-values.html"><a href="missing-values.html#vis_miss-from-visdat"><i class="fa fa-check"></i><b>4.2</b> <code>vis_miss()</code> from <strong>visdat</strong></a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a><ul>
+<li class="chapter" data-level="5.1" data-path="results.html"><a href="results.html#distribution-and-outliers"><i class="fa fa-check"></i><b>5.1</b> Distribution and Outliers</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="results.html"><a href="results.html#histogram-for-attributes"><i class="fa fa-check"></i><b>5.1.1</b> Histogram for Attributes</a></li>
+<li class="chapter" data-level="5.1.2" data-path="results.html"><a href="results.html#boxplot-for-attributes"><i class="fa fa-check"></i><b>5.1.2</b> Boxplot for Attributes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#pairwise-correlation"><i class="fa fa-check"></i><b>5.2</b> Pairwise Correlation</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="results.html"><a href="results.html#scatterplot-matrix"><i class="fa fa-check"></i><b>5.2.1</b> Scatterplot Matrix</a></li>
+<li class="chapter" data-level="5.2.2" data-path="results.html"><a href="results.html#correlation-heatmap"><i class="fa fa-check"></i><b>5.2.2</b> Correlation Heatmap</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="results.html"><a href="results.html#section"><i class="fa fa-check"></i><b>5.3</b> 5</a></li>
+<li class="chapter" data-level="5.4" data-path="results.html"><a href="results.html#section-1"><i class="fa fa-check"></i><b>5.4</b> 6</a></li>
+<li class="chapter" data-level="5.5" data-path="results.html"><a href="results.html#section-2"><i class="fa fa-check"></i><b>5.5</b> 7</a></li>
+<li class="chapter" data-level="5.6" data-path="results.html"><a href="results.html#section-3"><i class="fa fa-check"></i><b>5.6</b> 8</a></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a></li>
 <li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a></li>
 <li class="divider"></li>
@@ -144,7 +120,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Vinho Verde Wine Quality Analysis</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Vinho Verde Red Wine Quality Analysis</a>
           </h1>
         </div>
 
@@ -154,180 +130,72 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="results" class="section level1">
 <h1><span class="header-section-number">Chapter 5</span> Results</h1>
-<p>read the data</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
-<span class="kw">library</span>(gridExtra)
-
-df&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;resource/winequality-red.csv&quot;</span>, <span class="dt">sep =</span> <span class="st">&#39;;&#39;</span>, <span class="dt">head =</span> T)</code></pre></div>
-<p>producing boxplots for each of the variables</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">draw_box &lt;-<span class="st"> </span><span class="cf">function</span>(df,variable)
-{
-  plot &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> df, <span class="kw">aes</span>(<span class="dt">x =</span> variable)) <span class="op">+</span><span class="st"> </span>
-<span class="st">           </span><span class="kw">geom_boxplot</span>() <span class="op">+</span>
-<span class="st">           </span><span class="kw">xlab</span>(<span class="kw">substring</span>(<span class="kw">deparse</span>(<span class="kw">substitute</span>(variable)),<span class="dv">4</span>))
-            
-  <span class="kw">return</span>(plot)
-}
-
-<span class="kw">grid.arrange</span>(<span class="kw">draw_box</span>(df, df<span class="op">$</span>fixed.acidity),
-             <span class="kw">draw_box</span>(df, df<span class="op">$</span>volatile.acidity),
-             <span class="kw">draw_box</span>(df, df<span class="op">$</span>citric.acid),
-             <span class="kw">draw_box</span>(df, df<span class="op">$</span>residual.sugar),
-             <span class="kw">draw_box</span>(df, df<span class="op">$</span>chlorides),
-             <span class="kw">draw_box</span>(df, df<span class="op">$</span>free.sulfur.dioxide),
-             <span class="kw">draw_box</span>(df, df<span class="op">$</span>total.sulfur.dioxide),
-             <span class="kw">draw_box</span>(df, df<span class="op">$</span>density),
-             <span class="kw">draw_box</span>(df, df<span class="op">$</span>pH),
-             <span class="kw">draw_box</span>(df, df<span class="op">$</span>sulphates),
-             <span class="kw">draw_box</span>(df, df<span class="op">$</span>alcohol),
-             <span class="kw">draw_box</span>(df, df<span class="op">$</span>quality),
-             <span class="dt">ncol =</span> <span class="dv">3</span>)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
-<p>find correlation for each pairs of variables.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(GGally)
-<span class="kw">ggpairs</span>(df, <span class="dt">upper =</span> <span class="kw">list</span>(<span class="dt">continuous =</span> <span class="kw">wrap</span>(<span class="st">&quot;cor&quot;</span>, <span class="dt">size =</span> <span class="fl">2.5</span>)), <span class="dt">axisLabels=</span><span class="st">&quot;none&quot;</span>, <span class="dt">progress =</span> <span class="ot">FALSE</span>)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
-<p>Find correlation for each pairs of variables.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggcorrplot)
-
-cormap &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="kw">cor</span>(df),<span class="dv">1</span>)
-
-<span class="kw">ggcorrplot</span>(cormap, <span class="dt">hc.order =</span> <span class="ot">TRUE</span>, <span class="dt">type =</span> <span class="st">&quot;lower&quot;</span>, <span class="dt">lab =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<div id="distribution-and-outliers" class="section level2">
+<h2><span class="header-section-number">5.1</span> Distribution and Outliers</h2>
+<div id="histogram-for-attributes" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> Histogram for Attributes</h3>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>From the histogram, there are several things we observed:</p>
+<ol style="list-style-type: decimal">
+<li><p>Volatile acidity, density, and pH seem to be normally distributed.</p></li>
+<li><p>Alcohol level, fixed acidity, free sulfur dioxide, sulphates, and total sulfur dioxide are right skewed.</p></li>
+<li><p>Chlorides and residual sugar have relatively low variance.</p></li>
+<li><p>Citric acid seems to have a plateau-shaped distribution.</p></li>
+<li><p>Most wine has the quality of 5 and 6.</p></li>
+</ol>
+</div>
+<div id="boxplot-for-attributes" class="section level3">
+<h3><span class="header-section-number">5.1.2</span> Boxplot for Attributes</h3>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p>From the boxplot, there are several things we observed:</p>
+<ol style="list-style-type: decimal">
+<li><p>All the attributes have quite many outliers except citric.acid and alcohol. The observation might indicate better data in these two attributes and we would keey an eye on them while conducting correlation analysis.</p></li>
+<li><p>The median of our dependent variable - quality is 6.</p></li>
+</ol>
+</div>
+</div>
+<div id="pairwise-correlation" class="section level2">
+<h2><span class="header-section-number">5.2</span> Pairwise Correlation</h2>
+<div id="scatterplot-matrix" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> Scatterplot Matrix</h3>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-28-1.png" width="672" /> <img src="finalproj_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+</div>
+<div id="correlation-heatmap" class="section level3">
+<h3><span class="header-section-number">5.2.2</span> Correlation Heatmap</h3>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
 <p>When beginners first drink red wine, its much easier to taste the level of Sweetness and acidity of the red wine. We draw the scatterplot for residual sugar and volatile acidity with quality. We can see that only red wines with quality 4,5,6 have high and middle residual sugar and low and good quality red wines only have low residual sugar. So, if you feel the red wine is very sweet or even a little sweet, the quality red wine you drink is probably average. We also can see that only red wine with quality 3,4,5 has high volatile acidity. So, if you feel the red wine is very sour, the quality red wine you drink is probably low or average.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grid.arrange</span>(
-  <span class="kw">ggplot</span>(<span class="dt">data =</span> df, <span class="kw">aes</span>(<span class="dt">x =</span> quality, <span class="dt">y =</span> residual.sugar)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_jitter</span>(<span class="kw">aes</span>(<span class="dt">color =</span> residual.sugar))<span class="op">+</span>
-<span class="kw">scale_color_distiller</span>(<span class="dt">palette =</span> <span class="st">&quot;RdYlGn&quot;</span>)<span class="op">+</span>
-<span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&#39;Residual sugar with quality&#39;</span>)<span class="op">+</span>
-<span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position=</span><span class="st">&quot;bottom&quot;</span>),
-<span class="kw">ggplot</span>(<span class="dt">data =</span> df, <span class="kw">aes</span>(<span class="dt">x =</span> quality, <span class="dt">y =</span> volatile.acidity)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_jitter</span>(<span class="kw">aes</span>(<span class="dt">color =</span> volatile.acidity))<span class="op">+</span>
-<span class="kw">scale_color_distiller</span>(<span class="dt">palette =</span> <span class="st">&quot;RdYlGn&quot;</span>)<span class="op">+</span>
-<span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&#39;Volatile acidity with quality&#39;</span>)<span class="op">+</span>
-<span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position=</span><span class="st">&quot;bottom&quot;</span>),
-<span class="dt">ncol=</span><span class="dv">2</span>
-)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyr)
-<span class="kw">library</span>(ggplot2)
-<span class="kw">library</span>(ggpubr)
-<span class="kw">library</span>(dplyr)
-<span class="kw">library</span>(reshape2)
-<span class="kw">library</span>(GGally)
-<span class="kw">library</span>(viridis)
-
-red_df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;resource/winequality-red.csv&quot;</span>, <span class="dt">sep =</span> <span class="st">&#39;;&#39;</span>, <span class="dt">head =</span> T)</code></pre></div>
-<p>Lets create a new column quality_category to indicate whether a wine is good (quality &gt; 6), or average (quality = 5 or 6), or poor (quality &lt; 5)</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">red_df<span class="op">$</span>quality_category &lt;-<span class="st"> </span><span class="kw">cut</span>(red_df<span class="op">$</span>quality,<span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">9</span>),<span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&#39;poor&#39;</span>,<span class="st">&#39;average&#39;</span>,<span class="st">&#39;good&#39;</span>))</code></pre></div>
-<p>Let's first plot the histogram of every variable.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">gather</span>(red_df[<span class="dv">1</span><span class="op">:</span><span class="dv">12</span>]), <span class="kw">aes</span>(value)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>key, <span class="dt">scales =</span> <span class="st">&#39;free_x&#39;</span>)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
-<p>From the histogram, there are several things we observed: 1. Density, pH, volatile acidity are normally distributed. 2. Chlorides and residual sugar have low variance. 3. Alcohol level, fixed acidity, free sulfur dioxide, sulphates, and total sulfur dioxide are right skewed. 4. Citric acid has a plateau distribution. 5. Most wine has quality of 5 and 6.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">oldpar =<span class="st"> </span><span class="kw">par</span>(<span class="dt">mfrow =</span> <span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">6</span>))
-<span class="cf">for</span> ( i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">12</span> ) {
-  <span class="kw">boxplot</span>(red_df[[i]])
-  <span class="kw">mtext</span>(<span class="kw">names</span>(red_df)[i], <span class="dt">cex =</span> <span class="fl">0.8</span>, <span class="dt">side =</span> <span class="dv">1</span>, <span class="dt">line =</span> <span class="dv">2</span>)
-}</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(oldpar)</code></pre></div>
-<p>From the boxplots, we have the following observations: 1. Every variable has outliers. 2. The median of our dependent variable - quality is 6.</p>
-<p>In order to discover the relationships between each variable, let's show the heatmap of correlation matrices.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cm &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="kw">cor</span>(red_df[<span class="dv">1</span><span class="op">:</span><span class="dv">12</span>]),<span class="dv">2</span>)
-melt_cm =<span class="st"> </span><span class="kw">melt</span>(cm)
-
-<span class="kw">ggplot</span>(<span class="dt">data =</span> melt_cm,<span class="kw">aes</span>(<span class="dt">x=</span>Var1, <span class="dt">y=</span>Var2, <span class="dt">fill=</span>value)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_tile</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">scale_fill_gradient2</span>(<span class="dt">low =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">high =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">mid =</span> <span class="st">&quot;white&quot;</span>, 
-                       <span class="dt">midpoint =</span> <span class="dv">0</span>, <span class="dt">limit =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="dt">space =</span> <span class="st">&quot;Lab&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(Var2, Var1, <span class="dt">label =</span> value), <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>, <span class="dt">size =</span> <span class="dv">4</span>)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pairs</span>(red_df[<span class="dv">1</span><span class="op">:</span><span class="dv">12</span>], <span class="dt">col =</span> red_df<span class="op">$</span>quality, <span class="dt">lower_panel =</span> <span class="ot">NULL</span>)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
 <p>From the heatmap, the variables that have high correlation with quality are alcohol, volatile acidity, sulphates, citric acid, and Next, let's take a look at some bavariate graphs of these variables.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">red_df<span class="op">$</span>quality &lt;-<span class="st"> </span><span class="kw">as.factor</span>(red_df<span class="op">$</span>quality)
-
-a &lt;-<span class="st"> </span><span class="kw">ggplot</span>(red_df, <span class="kw">aes</span>(<span class="dt">x=</span>quality, <span class="dt">y=</span>alcohol, <span class="dt">fill=</span>quality_category)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>)
-
-b &lt;-<span class="st"> </span><span class="kw">ggplot</span>(red_df, <span class="kw">aes</span>(<span class="dt">x=</span>quality, <span class="dt">y=</span>volatile.acidity, <span class="dt">fill=</span>quality_category)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_boxplot</span>() 
-
-c &lt;-<span class="st"> </span><span class="kw">ggplot</span>(red_df, <span class="kw">aes</span>(<span class="dt">x=</span>quality, <span class="dt">y=</span>sulphates, <span class="dt">fill=</span>quality_category)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>)
-
-d &lt;-<span class="st"> </span><span class="kw">ggplot</span>(red_df, <span class="kw">aes</span>(<span class="dt">x=</span>quality, <span class="dt">y=</span>citric.acid, <span class="dt">fill=</span>quality_category)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>)
-
-<span class="kw">ggarrange</span>(a, b, c, d, <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">nrow =</span> <span class="dv">2</span>,
-                    <span class="dt">common.legend =</span> <span class="ot">TRUE</span>, <span class="dt">legend =</span> <span class="st">&quot;right&quot;</span>)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+</div>
+</div>
+<div id="section" class="section level2">
+<h2><span class="header-section-number">5.3</span> 5</h2>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
 <p>Alcohol has the strongest correlation with quality in our dataset. And from this graph, we can clearly see this relationship. Better wines have a high alcohol percentage. It is either because strong wines are more tasty or people who rates wines are wine lovers and they favor strong wines.</p>
 <p>From the graph above, we can tell that volatile acidity has a negative relationship with quality. Better wines tend to have lower median of volatile acidity.</p>
 <p>Sulphates seems to have positive relationship with quality. Better wines have higher median of sulphates level.</p>
 <p>Citric acid seems to have positive relationship with quality. Better wines have higher median of citric acid level.</p>
-<p>The following graph could further justify the above mentioned relationship between wine quality and alcohol density.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">f1 =<span class="st"> </span><span class="kw">ggplot</span>(red_df, <span class="kw">aes</span>(alcohol, quality, <span class="dt">color =</span> quality_category)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">facet_grid</span>(<span class="dt">cols =</span> <span class="kw">vars</span>(quality_category)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">labels=</span>letters[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>], <span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>,<span class="st">&quot;blue&quot;</span>,<span class="st">&quot;green&quot;</span>))
-
-f2 =<span class="st"> </span><span class="kw">ggplot</span>(red_df, <span class="kw">aes</span>(volatile.acidity, quality, <span class="dt">color =</span> quality_category)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">facet_grid</span>(<span class="dt">cols =</span> <span class="kw">vars</span>(quality_category)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">labels=</span>letters[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>], <span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>,<span class="st">&quot;blue&quot;</span>,<span class="st">&quot;green&quot;</span>))
-
-
-f3 =<span class="st"> </span><span class="kw">ggplot</span>(red_df, <span class="kw">aes</span>(sulphates, quality, <span class="dt">color =</span> quality_category)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">facet_grid</span>(<span class="dt">cols =</span> <span class="kw">vars</span>(quality_category)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">labels=</span>letters[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>], <span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>,<span class="st">&quot;blue&quot;</span>,<span class="st">&quot;green&quot;</span>))
-
-f4 =<span class="st"> </span><span class="kw">ggplot</span>(red_df, <span class="kw">aes</span>(citric.acid, quality, <span class="dt">color =</span> quality_category)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">facet_grid</span>(<span class="dt">cols =</span> <span class="kw">vars</span>(quality_category)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">labels=</span>letters[<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>], <span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>,<span class="st">&quot;blue&quot;</span>,<span class="st">&quot;green&quot;</span>))
-
-<span class="kw">ggarrange</span>(f1,f2,f3,f4, <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">nrow =</span> <span class="dv">2</span>,
-                    <span class="dt">common.legend =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+</div>
+<div id="section-1" class="section level2">
+<h2><span class="header-section-number">5.4</span> 6</h2>
+<p>The following graph could further justify the above mentioned relationship between wine quality and alcohol density. <img src="finalproj_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+</div>
+<div id="section-2" class="section level2">
+<h2><span class="header-section-number">5.5</span> 7</h2>
 <p>Then, let's study how the combination of two variables affect quality by looking at some multivariate graphs.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">red_df<span class="op">$</span>quality &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(red_df<span class="op">$</span>quality)
-<span class="kw">ggplot</span>(<span class="dt">data =</span> red_df, <span class="kw">aes</span>(<span class="dt">x=</span>alcohol,<span class="dt">y=</span>volatile.acidity,<span class="dt">color =</span> quality))<span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span>
-<span class="st">  </span><span class="kw">facet_wrap</span>(red_df<span class="op">$</span>quality_category)<span class="op">+</span>
-<span class="st">  </span><span class="kw">scale_colour_gradient</span>(<span class="dt">low =</span> <span class="st">&quot;Blue&quot;</span>,
-                        <span class="dt">high =</span> <span class="st">&quot;Orange&quot;</span>, <span class="dt">na.value =</span> <span class="st">&quot;black&quot;</span>)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
 <p>From the graph above, wee can see that good wines have higher alcohol and low volatile acidity levels than the other two groups with some outliers. The wine with the highest alcohol level scored only a 5 in quality. Also, the poor wines seem to have a dispersed distribution suggesting that people are consistent in the standards of good wines but inconsistent in the standards of poor wines.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> red_df, <span class="kw">aes</span>(<span class="dt">x=</span>alcohol,<span class="dt">y=</span>chlorides,<span class="dt">color =</span> quality))<span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span>
-<span class="st">  </span><span class="kw">facet_wrap</span>(red_df<span class="op">$</span>quality_category)<span class="op">+</span>
-<span class="st">  </span><span class="kw">scale_colour_gradient</span>(<span class="dt">low =</span> <span class="st">&quot;Blue&quot;</span>,
-                        <span class="dt">high =</span> <span class="st">&quot;Orange&quot;</span>, <span class="dt">na.value =</span> <span class="st">&quot;black&quot;</span>)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
 <p>This graph is interesting because it shows that most wines that have high chlorides level are categorized as average wines. This pattern suggests that chlorides may have a non-linear relationship with quality.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> red_df, <span class="kw">aes</span>(<span class="dt">x=</span>volatile.acidity,<span class="dt">y=</span>chlorides,<span class="dt">color =</span> quality))<span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span>
-<span class="st">  </span><span class="kw">facet_wrap</span>(red_df<span class="op">$</span>quality_category)<span class="op">+</span>
-<span class="st">  </span><span class="kw">scale_colour_gradient</span>(<span class="dt">low =</span> <span class="st">&quot;Blue&quot;</span>,
-                        <span class="dt">high =</span> <span class="st">&quot;Orange&quot;</span>, <span class="dt">na.value =</span> <span class="st">&quot;black&quot;</span>)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
 <p>This graph supports our theory before that people have consistent standards of good wine and inconsistent standards of poor wines. Because all good wines are clustered in the lower left corner of the graph and poor wines have dispersed distribution.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">q &lt;-<span class="st"> </span><span class="kw">cut</span>(red_df<span class="op">$</span>residual.sugar,<span class="dt">breaks=</span><span class="dv">4</span>,<span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;0-25&quot;</span>,<span class="st">&quot;25-50&quot;</span>,<span class="st">&quot;50-75&quot;</span>,<span class="st">&quot;75-100&quot;</span>))
-<span class="kw">ggplot</span>(red_df, <span class="kw">aes</span>(fixed.acidity,alcohol,<span class="dt">color =</span> alcohol))<span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span>
-<span class="st">  </span><span class="kw">facet_wrap</span>(q)<span class="op">+</span>
-<span class="st">  </span><span class="kw">scale_colour_gradient</span>(<span class="dt">low =</span> <span class="st">&quot;Blue&quot;</span>,
-                        <span class="dt">high =</span> <span class="st">&quot;Orange&quot;</span>, <span class="dt">na.value =</span> <span class="st">&quot;black&quot;</span>)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-29-1.png" width="672" /> This graph shows that for low fixed.acidity and high alcohol, the wine's residual.sugar values usually remain at very low level.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">red_df<span class="op">$</span>taste &lt;-<span class="st"> </span><span class="kw">cut</span>(red_df<span class="op">$</span>quality,<span class="dt">breaks=</span><span class="dv">2</span>,<span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&#39;poor&#39;</span>,<span class="st">&#39;good&#39;</span>))
-<span class="kw">ggparcoord</span>(red_df, <span class="dt">columns =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">10</span>,<span class="dv">11</span>), <span class="dt">alphaLines =</span> .<span class="dv">1</span>
-           , <span class="dt">scale =</span> <span class="st">&quot;globalminmax&quot;</span>, <span class="dt">splineFactor =</span> <span class="dv">1</span>, <span class="dt">groupColumn =</span> <span class="dv">14</span>)</code></pre></div>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-30-1.png" width="672" /> From the above parallel coordinate plot, it can further validate our correlation relationships between different variables. It can also indicates which factor leads to good taste for the red wine.</p>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-37-1.png" width="672" /> This graph shows that for low fixed.acidity and high alcohol, the wine's residual.sugar values usually remain at very low level.</p>
+</div>
+<div id="section-3" class="section level2">
+<h2><span class="header-section-number">5.6</span> 8</h2>
+<p><img src="finalproj_files/figure-html/unnamed-chunk-38-1.png" width="672" /> From the above parallel coordinate plot, it can further validate our correlation relationships between different variables. It can also indicates which factor leads to good taste for the red wine.</p>
 
+</div>
 </div>
             </section>
 

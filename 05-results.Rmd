@@ -1,57 +1,75 @@
 # Results
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+#knitr::opts_chunk$set(echo = TRUE)
 ```
-read the data
+
 ```{r}
 library(tidyverse)
 library(gridExtra)
 
 df<- read.csv("resource/winequality-red.csv", sep = ';', head = T)
+df$quality.category <- cut(df$quality,breaks=c(2,4,6,9),labels = c('poor','average','good'))
 ```
 
-producing boxplots for each of the variables
+## Distribution and Outliers
+
+### Histogram for Attributes
 ```{r,warning=FALSE,message=FALSE}
-draw_box <- function(df,variable)
-{
-  plot <- ggplot(data = df, aes(x = variable)) + 
-           geom_boxplot() +
-           xlab(substring(deparse(substitute(variable)),4))
-            
-  return(plot)
+library(MASS)
+oldpar = par(mfrow = c(3,4))
+for ( i in 1:12 ) {
+  truehist(df[[i]], xlab = names(df)[i], col = 'lightblue', main = paste("Average =", signif(mean(df[[i]]),3)))
 }
-
-grid.arrange(draw_box(df, df$fixed.acidity),
-             draw_box(df, df$volatile.acidity),
-             draw_box(df, df$citric.acid),
-             draw_box(df, df$residual.sugar),
-             draw_box(df, df$chlorides),
-             draw_box(df, df$free.sulfur.dioxide),
-             draw_box(df, df$total.sulfur.dioxide),
-             draw_box(df, df$density),
-             draw_box(df, df$pH),
-             draw_box(df, df$sulphates),
-             draw_box(df, df$alcohol),
-             draw_box(df, df$quality),
-             ncol = 3)
 ```
 
-find correlation for each pairs of variables.
+From the histogram, there are several things we observed:
+
+1. Volatile acidity, density, and pH seem to be normally distributed.
+
+2. Alcohol level, fixed acidity, free sulfur dioxide, sulphates, and total sulfur dioxide are right skewed.
+
+3. Chlorides and residual sugar have relatively low variance.
+
+4. Citric acid seems to have a plateau-shaped distribution.
+
+5. Most wine has the quality of 5 and 6.
+
+
+### Boxplot for Attributes
+```{r,warning=FALSE,message=FALSE}
+graph = par(mfrow = c(2,6))
+for ( i in 1:12 ) {
+  boxplot(red_df[[i]])
+  mtext(names(red_df)[i], cex = 0.8, side = 1, line = 2)
+}
+par(graph)
+```
+
+From the boxplot, there are several things we observed:
+
+1. All the attributes have quite many outliers except citric.acid and alcohol. The observation might indicate better data in these two attributes and we would keey an eye on them while conducting correlation analysis.
+
+2. The median of our dependent variable - quality is 6.
+
+
+## Pairwise Correlation 
+
+### Scatterplot Matrix
 ```{r,warning=FALSE,message=FALSE}
 library(GGally)
-ggpairs(df, upper = list(continuous = wrap("cor", size = 2.5)), axisLabels="none", progress = FALSE)
+#ggpairs(df, upper = list(continuous = wrap("cor", size = 3)), axisLabels="none", progress = FALSE)
+pairs(df[1:12], col = df$quality, lower_panel = NULL)
+```
+```{r}
+pairs(df[,c(7, 8, 10, 11)], col = df$quality, pch = df$quality)
 ```
 
-
-Find correlation for each pairs of variables.
+### Correlation Heatmap
 ```{r,warning=FALSE,message=FALSE}
 library(ggcorrplot)
-
-cormap <- round(cor(df),1)
-
-ggcorrplot(cormap, hc.order = TRUE, type = "lower", lab = TRUE)
-
+cormap <- round(cor(df[1:12]),2)
+ggcorrplot(cormap, type = "lower", lab = TRUE, lab_size=3)
 ```
 
 When beginners first drink red wine, its much easier to taste the level of Sweetness and acidity of the red wine. We draw the scatterplot for residual sugar and volatile acidity with quality. We can see that only red wines with quality 4,5,6 have high and middle residual sugar and low and good quality red wines only have low residual sugar. So, if you feel the red wine is very sweet or even a little sweet, the quality red wine you drink is probably average.
@@ -73,94 +91,24 @@ ncol=2
 )
 ```
 
-
-
-
-
-```{r,warning=FALSE,message=FALSE}
-library(tidyr)
-library(ggplot2)
-library(ggpubr)
-library(dplyr)
-library(reshape2)
-library(GGally)
-library(viridis)
-
-red_df <- read.csv("resource/winequality-red.csv", sep = ';', head = T)
-```
-
-Lets create a new column quality_category to indicate whether a wine is good (quality > 6), or average (quality = 5 or 6), or poor (quality < 5)
-
-```{r,warning=FALSE,message=FALSE}
-red_df$quality_category <- cut(red_df$quality,breaks=c(2,4,6,9),labels = c('poor','average','good'))
-```
-
-
-Let's first plot the histogram of every variable.
-
-```{r,warning=FALSE,message=FALSE}
-ggplot(gather(red_df[1:12]), aes(value)) + 
-  geom_histogram(bins = 20) + 
-  facet_wrap(~key, scales = 'free_x')
-```
-
-From the histogram, there are several things we observed:
-1. Density, pH, volatile acidity are normally distributed.
-2. Chlorides and residual sugar have low variance.
-3. Alcohol level, fixed acidity, free sulfur dioxide, sulphates, and total sulfur dioxide are right skewed.
-4. Citric acid has a plateau distribution.
-5. Most wine has quality of 5 and 6.
-
-```{r,warning=FALSE,message=FALSE}
-oldpar = par(mfrow = c(2,6))
-for ( i in 1:12 ) {
-  boxplot(red_df[[i]])
-  mtext(names(red_df)[i], cex = 0.8, side = 1, line = 2)
-}
-par(oldpar)
-```
-
-From the boxplots, we have the following observations:
-1. Every variable has outliers.
-2. The median of our dependent variable - quality is 6.
-
-
-In order to discover the relationships between each variable, let's show the heatmap of correlation matrices.
-
-```{r,warning=FALSE,message=FALSE}
-cm <- round(cor(red_df[1:12]),2)
-melt_cm = melt(cm)
-
-ggplot(data = melt_cm,aes(x=Var1, y=Var2, fill=value)) + 
-  geom_tile() +
-  scale_fill_gradient2(low = "blue", high = "red", mid = "white", 
-                       midpoint = 0, limit = c(-1,1), space = "Lab") +
-  geom_text(aes(Var2, Var1, label = value), color = "black", size = 4)
-```
-
-
-```{r,warning=FALSE,message=FALSE}
-pairs(red_df[1:12], col = red_df$quality, lower_panel = NULL)
-```
-
 From the heatmap, the variables that have high correlation with quality are alcohol, volatile acidity, sulphates,  citric acid, and 
 Next, let's take a look at some bavariate graphs of these variables.
 
 
-
+## 5
 ```{r,warning=FALSE,message=FALSE}
-red_df$quality <- as.factor(red_df$quality)
+df$quality <- as.factor(df$quality)
 
-a <- ggplot(red_df, aes(x=quality, y=alcohol, fill=quality_category)) + 
+a <- ggplot(df, aes(x=quality, y=alcohol, fill=quality.category)) + 
   geom_boxplot() + theme(legend.position = "none")
 
-b <- ggplot(red_df, aes(x=quality, y=volatile.acidity, fill=quality_category)) + 
+b <- ggplot(df, aes(x=quality, y=volatile.acidity, fill=quality.category)) + 
   geom_boxplot() 
 
-c <- ggplot(red_df, aes(x=quality, y=sulphates, fill=quality_category)) + 
+c <- ggplot(df, aes(x=quality, y=sulphates, fill=quality.category)) + 
   geom_boxplot() + theme(legend.position = "none")
 
-d <- ggplot(red_df, aes(x=quality, y=citric.acid, fill=quality_category)) + 
+d <- ggplot(df, aes(x=quality, y=citric.acid, fill=quality.category)) + 
   geom_boxplot() + theme(legend.position = "none")
 
 ggarrange(a, b, c, d, ncol = 2, nrow = 2,
@@ -172,13 +120,13 @@ Alcohol has the strongest correlation with quality in our dataset. And from this
 
 
 
-
 From the graph above, we can tell that volatile acidity has a negative relationship with quality. Better wines tend to have lower median of volatile acidity.
 
 Sulphates seems to have positive relationship with quality. Better wines have higher median of sulphates level.
 
 Citric acid seems to have positive relationship with quality. Better wines have higher median of citric acid level.
 
+## 6 
 The following graph could further justify the above mentioned relationship between wine quality and alcohol density. 
 ```{r,warning=FALSE,message=FALSE}
 f1 = ggplot(red_df, aes(alcohol, quality, color = quality_category)) + 
@@ -208,6 +156,7 @@ ggarrange(f1,f2,f3,f4, ncol = 2, nrow = 2,
 ```
 
 
+## 7
 Then, let's study how the combination of two variables affect quality by looking at some multivariate graphs.
 
 ```{r,warning=FALSE,message=FALSE}
@@ -245,7 +194,6 @@ This graph supports our theory before that people have consistent standards of g
 
 
 
-
 ```{r,warning=FALSE,message=FALSE}
 q <- cut(red_df$residual.sugar,breaks=4,labels = c("0-25","25-50","50-75","75-100"))
 ggplot(red_df, aes(fixed.acidity,alcohol,color = alcohol))+
@@ -257,7 +205,7 @@ ggplot(red_df, aes(fixed.acidity,alcohol,color = alcohol))+
 This graph shows that for low fixed.acidity and high alcohol, the wine's residual.sugar values usually remain at very low level. 
 
 
-
+## 8
 ```{r,warning=FALSE,message=FALSE}
 red_df$taste <- cut(red_df$quality,breaks=2,labels = c('poor','good'))
 ggparcoord(red_df, columns = c(1,2,3,4,10,11), alphaLines = .1

@@ -2,8 +2,9 @@
 
 Eric is responsible for collecting the data. 
 
-Fortunately, two datasets, related to Portuguese red and white Vinho Verde wine samples, are publicly available on UCI
-Machine Learning Repository: https://archive.ics.uci.edu/ml/datasets/wine+quality.
+Fortunately, the dataset, related to Portuguese red Vinho Verde wine samples, is publicly available on UCI
+Machine Learning Repository: https://archive.ics.uci.edu/ml/datasets/wine+quality. Notice that, due to privacy and logistic issues, we have no access to wine brands, selling price, etc. For more information, see the reference [Cortez et al., 2009] http://www3.dsi.uminho.pt/pcortez/wine/.
+
 
 
 ## Attributes and Outcome
@@ -36,8 +37,6 @@ In total, we have **11 attributes** and **1 outcome (quality)** for wine dataset
 
 ## Number of Records
 - **red wine**: 1599 examples
-
-- **white wine**: 4898 examples
 
 
 ## Types of Variables 

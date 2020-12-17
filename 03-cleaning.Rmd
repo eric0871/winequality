@@ -1,22 +1,23 @@
 # Data transformation
 
-## Load in Data
-As our datasets are well organized in csv files, we just call `read.csv(...)` to load in wine dataset.
+## Load Data
+As our datasets are well organized in csv files, we just call `read.csv(...)` to load in wine dataset. Observe that we do have 12 columns in total (11 attributes and 1 outcome). 
 ```{r}
 library(tidyr)
 library(dplyr)
 library(reshape2)
 
 df <- read.csv("resource/winequality-red.csv", sep = ';', head = T)
+head(df)
 ```
 ## Data Statistics
-We now get some metrics about the attributes.
+Now let's get some metrics about the attributes and outcome.
 ```{r}
 summary(df)
 ```
 
 ## Categorize `quality` column
-Here, we cut `quality` to three factor levels as follows and store as `quality.category` back to the dataframe: 
+Here, we cut `quality` to three factor levels as follows and store it as `quality.category` back to the dataframe: 
 
 - `poor`: `quality` <  5
 

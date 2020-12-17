@@ -1,5 +1,5 @@
 --- 
-title: "Vinho Verde Wine Quality Analysis"
+title: "Vinho Verde Red Wine Quality Analysis"
 author: "Sally Bao & Eric Cheng & Qiran Li & Zhibin Li"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -7,19 +7,18 @@ site: bookdown::bookdown_site
 
 # Introduction
 
-Despite the covid-19 pandemic, we are all looking forward to celebrating Christmas safely with families and friends at home. As lots of people get the festivities started with a great glass of wine, we are excited to provide a brief introduction on the quality of Vinho Verde red and white wines from the north of Portugal. 
+Despite the covid-19 pandemic, we are all looking forward to celebrating Christmas safely with families and friends at home. As lots of people get the festivities started with a great glass of wine, we hope to provide readers with some takeaways on how to pick a wine that matches their taste preference most by analyzing the indicators of the quality of red wine.
 
-In our report, our goal is to identify the relationship between red/white quality and eleven physicochemical attributes. Note that, due to privacy and logistic issues, we have no access to wine brands, selling price, etc. For more information, see the reference [Cortez et al., 2009] http://www3.dsi.uminho.pt/pcortez/wine/.
-
+In our report, we conduct an exploratory data analysis on the quality of Portugues Vinho Verde red wine. Our goal is to identify the relationship between red wine quality and eleven physicochemical attributes.
 
 ![Credit: Marketview Liquor](resource/Christmas-Wine.jpg)
 
 
 In this project, we plan to answer the questions as follows:
 
-- What's the distribution of each attribute? Is it normally distrtibuted or skewed?
+- What's the distribution of each attribute? Is there any outlier in each attribute?
 
 - Are there any attribute pairs have a linear correlation? 
 
-- What's the top 3 attributes that has the highest positive/negative correlation with red/white wine quality? 
+- What's the top 3 attributes that has the highest positive/negative correlation with the red wine quality? 
 

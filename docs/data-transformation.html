@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Data transformation | Vinho Verde Wine Quality Analysis</title>
-  <meta name="description" content="Chapter 3 Data transformation | Vinho Verde Wine Quality Analysis" />
+  <title>Chapter 3 Data transformation | Vinho Verde Red Wine Quality Analysis</title>
+  <meta name="description" content="Chapter 3 Data transformation | Vinho Verde Red Wine Quality Analysis" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Data transformation | Vinho Verde Wine Quality Analysis" />
+  <meta property="og:title" content="Chapter 3 Data transformation | Vinho Verde Red Wine Quality Analysis" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Data transformation | Vinho Verde Wine Quality Analysis" />
+  <meta name="twitter:title" content="Chapter 3 Data transformation | Vinho Verde Red Wine Quality Analysis" />
   
   
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Sally Bao &amp; Eric Cheng &amp; Qiran Li &amp; Zhibin Li" />
 
 
-<meta name="date" content="2020-12-16" />
+<meta name="date" content="2020-12-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -61,43 +61,6 @@
 <script src="libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -122,15 +85,28 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.3" data-path="data-sources.html"><a href="data-sources.html#types-of-variables"><i class="fa fa-check"></i><b>2.3</b> Types of Variables</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a><ul>
-<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#load-in-data"><i class="fa fa-check"></i><b>3.1</b> Load in Data</a></li>
+<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#load-data"><i class="fa fa-check"></i><b>3.1</b> Load Data</a></li>
 <li class="chapter" data-level="3.2" data-path="data-transformation.html"><a href="data-transformation.html#data-statistics"><i class="fa fa-check"></i><b>3.2</b> Data Statistics</a></li>
 <li class="chapter" data-level="3.3" data-path="data-transformation.html"><a href="data-transformation.html#categorize-quality-column"><i class="fa fa-check"></i><b>3.3</b> Categorize <code>quality</code> column</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a><ul>
 <li class="chapter" data-level="4.1" data-path="missing-values.html"><a href="missing-values.html#heatmap"><i class="fa fa-check"></i><b>4.1</b> Heatmap</a></li>
-<li class="chapter" data-level="4.2" data-path="missing-values.html"><a href="missing-values.html#vis_miss-plot-from-visdat"><i class="fa fa-check"></i><b>4.2</b> <code>vis_miss()</code> plot from <strong>visdat</strong></a></li>
+<li class="chapter" data-level="4.2" data-path="missing-values.html"><a href="missing-values.html#vis_miss-from-visdat"><i class="fa fa-check"></i><b>4.2</b> <code>vis_miss()</code> from <strong>visdat</strong></a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a></li>
+<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a><ul>
+<li class="chapter" data-level="5.1" data-path="results.html"><a href="results.html#distribution-and-outliers"><i class="fa fa-check"></i><b>5.1</b> Distribution and Outliers</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="results.html"><a href="results.html#histogram-for-attributes"><i class="fa fa-check"></i><b>5.1.1</b> Histogram for Attributes</a></li>
+<li class="chapter" data-level="5.1.2" data-path="results.html"><a href="results.html#boxplot-for-attributes"><i class="fa fa-check"></i><b>5.1.2</b> Boxplot for Attributes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="results.html"><a href="results.html#pairwise-correlation"><i class="fa fa-check"></i><b>5.2</b> Pairwise Correlation</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="results.html"><a href="results.html#scatterplot-matrix"><i class="fa fa-check"></i><b>5.2.1</b> Scatterplot Matrix</a></li>
+<li class="chapter" data-level="5.2.2" data-path="results.html"><a href="results.html#correlation-heatmap"><i class="fa fa-check"></i><b>5.2.2</b> Correlation Heatmap</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="results.html"><a href="results.html#section"><i class="fa fa-check"></i><b>5.3</b> 5</a></li>
+<li class="chapter" data-level="5.4" data-path="results.html"><a href="results.html#section-1"><i class="fa fa-check"></i><b>5.4</b> 6</a></li>
+<li class="chapter" data-level="5.5" data-path="results.html"><a href="results.html#section-2"><i class="fa fa-check"></i><b>5.5</b> 7</a></li>
+<li class="chapter" data-level="5.6" data-path="results.html"><a href="results.html#section-3"><i class="fa fa-check"></i><b>5.6</b> 8</a></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a></li>
 <li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a></li>
 <li class="divider"></li>
@@ -144,7 +120,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Vinho Verde Wine Quality Analysis</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Vinho Verde Red Wine Quality Analysis</a>
           </h1>
         </div>
 
@@ -154,13 +130,27 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="data-transformation" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Data transformation</h1>
-<div id="load-in-data" class="section level2">
-<h2><span class="header-section-number">3.1</span> Load in Data</h2>
-<p>As our datasets are well organized in csv files, we just call <code>read.csv(...)</code> to load in wine dataset.</p>
+<div id="load-data" class="section level2">
+<h2><span class="header-section-number">3.1</span> Load Data</h2>
+<p>As our datasets are well organized in csv files, we just call <code>read.csv(...)</code> to load in wine dataset. Observe that we do have 12 columns in total (11 attributes and 1 outcome).</p>
+<pre><code>##   fixed.acidity volatile.acidity citric.acid residual.sugar chlorides free.sulfur.dioxide total.sulfur.dioxide density   pH sulphates
+## 1           7.4             0.70        0.00            1.9     0.076                  11                   34  0.9978 3.51      0.56
+## 2           7.8             0.88        0.00            2.6     0.098                  25                   67  0.9968 3.20      0.68
+## 3           7.8             0.76        0.04            2.3     0.092                  15                   54  0.9970 3.26      0.65
+## 4          11.2             0.28        0.56            1.9     0.075                  17                   60  0.9980 3.16      0.58
+## 5           7.4             0.70        0.00            1.9     0.076                  11                   34  0.9978 3.51      0.56
+## 6           7.4             0.66        0.00            1.8     0.075                  13                   40  0.9978 3.51      0.56
+##   alcohol quality
+## 1     9.4       5
+## 2     9.8       5
+## 3     9.8       5
+## 4     9.8       6
+## 5     9.4       5
+## 6     9.4       5</code></pre>
 </div>
 <div id="data-statistics" class="section level2">
 <h2><span class="header-section-number">3.2</span> Data Statistics</h2>
-<p>We now get some metrics about the attributes.</p>
+<p>Now let's get some metrics about the attributes and outcome.</p>
 <pre><code>##  fixed.acidity   volatile.acidity  citric.acid    residual.sugar     chlorides       free.sulfur.dioxide total.sulfur.dioxide
 ##  Min.   : 4.60   Min.   :0.1200   Min.   :0.000   Min.   : 0.900   Min.   :0.01200   Min.   : 1.00       Min.   :  6.00      
 ##  1st Qu.: 7.10   1st Qu.:0.3900   1st Qu.:0.090   1st Qu.: 1.900   1st Qu.:0.07000   1st Qu.: 7.00       1st Qu.: 22.00      
@@ -178,7 +168,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="categorize-quality-column" class="section level2">
 <h2><span class="header-section-number">3.3</span> Categorize <code>quality</code> column</h2>
-<p>Here, we cut <code>quality</code> to three factor levels as follows and store as <code>quality.category</code> back to the dataframe:</p>
+<p>Here, we cut <code>quality</code> to three factor levels as follows and store it as <code>quality.category</code> back to the dataframe:</p>
 <ul>
 <li><p><code>poor</code>: <code>quality</code> &lt; 5</p></li>
 <li><p><code>average</code>: <code>quality</code> = 5 or 6</p></li>
