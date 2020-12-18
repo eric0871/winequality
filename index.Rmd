@@ -16,10 +16,10 @@ In our report, we conduct an exploratory data analysis on the quality of Portugu
 
 In this project, we plan to answer the questions as follows:
 
-- Does only the sweetness or sourness affect the quality of wine the most? If not, which would be the attribute that affects the red wine quality the most?
+- **Does only sweetness or sourness affect the quality of wine the most? If not, which would be the attribute that affects the red wine quality the most?**
 
-- What's the distribution of each attribute? Are there many outliers in each attribute?
+- **What's the distribution of each attribute? Are there many outliers in each attribute?**
 
-- Are there any attribute pairs have a linear correlation? How about multi-linear correlation between quality and the combination of attributes?
+- **Are there any attribute pairs have a linear correlation? How about multi-linear correlation between quality and the combination of attributes?**
 
 

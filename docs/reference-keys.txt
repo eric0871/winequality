@@ -18,12 +18,14 @@ pairwise-attribute-correlation
 scatterplot-matrix
 correlation-heatmap
 correlation-between-quality-and-attributes
-sweetness-and-sourness-v.s.-quality
+sweetnesssourness-v.s.-quality
 alcohol-v.s.-quality
-pair-attributes-v.s.-quality
+pairwise-attributes-v.s.-quality
 alcohol-volatile-acidity
 alcohol-chlorides
 volatile-acidity-chlorides
-parallel-coordinate-plot
+parallel-coordinate-plot-for-quality
 interactive-component
 conclusion
+findings
+sepculations

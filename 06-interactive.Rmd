@@ -1,9 +1,12 @@
 # Interactive component
 
 
+
+
 <script src="https://d3js.org/d3.v4.js"></script>
 <div id="my_dataviz"></div>
 
+<h3 style="font-family: Palatino;">Click `restart` before you choose new attributes.</h3>
 
 <p>Please select X:</p>
 <select id="selectx">

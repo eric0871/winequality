@@ -1,2 +1,26 @@
 # Conclusion
 
+![Credit: Wine Cooler Direct](resource/christmas-red-wine.jpg)
+
+By far, we have analyzed this red wine quality dataset using multiple data exploration methods and have generated some interesting findings and speculations.  
+
+## Findings
+
+1. To our surprise, **sweetness** (residual sugar) do not present a visible relationship with quality, but there may exist some relationship that cannot be detected easily.
+
+2. Over 80% of red wine in the data set are rated a 5 or 6 in quality score (average wines), 4% are rated 3 or 4 (poor wines), and 14% are rated 7 or 8 (good wines).
+
+3. There are some highly correlated variables in our dataset such as density/fixed acidity, fixed acidity/pH etc. We should consider dropping some of the variables if we are going to further study this dataset with machine learning methods. For instance, density is a variable that depends on other elements in a bottle of wine so it wouldn’t provide us much new information thus should be dropped.
+
+
+## Sepculations
+
+1. **Alcohol** level has the greatest correlation with wine quality suggesting that people prefer heavy-bodied wines.
+
+2. Red wines with high chlorides are mostly categorized as average wines. This suggests a non-linear relationship between chlorides concentration and wine quality. We may be able to capture this relationship by methods like decision tree in further studies.
+
+3. The multivariate scatter plots we had for good and average wines in `section 5.4` show clustering patterns whereas the scatter plots for poor wines exhibit a messier pattern. One reason to explain this is people’s standards for good wines are uniform. The other reason which might explain this is that the wine tasters are stubborn to accept wines that tastes differently.
+
+4. Volatile acidity shows a negative relationship with quality whereas pH value doesn’t show any visible relationship with quality. This observation suggests that people are indifferent about the sourness but they like the smoother and rounder taste of a low-acid wine. However, high-acid wine helps during aging so this might be a trade-off.
+
+

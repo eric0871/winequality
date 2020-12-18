@@ -7,7 +7,7 @@ Machine Learning Repository: https://archive.ics.uci.edu/ml/datasets/wine+qualit
 
 
 
-## Attributes and Outcome
+## Attributes and outcome
 In total, we have **11 attributes** and **1 outcome (quality)** for wine dataset.
 
 1. **fixed acidity** $(g/l)$: non-volatile acid that do not evaporate readily (e.g. tartaric acid)
@@ -35,9 +35,9 @@ In total, we have **11 attributes** and **1 outcome (quality)** for wine dataset
 12. **quality**: a grading scale of wine quality that ranges from 0 (very bad) to 10 (excellent).
 
 
-## Number of Records
+## Number of records
 - **red wine**: 1599 examples
 
 
-## Types of Variables 
+## Types of variables 
 All the attributes are numeric and the outcome is integer.
